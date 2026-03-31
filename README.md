@@ -77,6 +77,11 @@ This is the place for you to write reflections:
 ### Mandatory (Publisher) Reflections
 
 #### Reflection Publisher-1
+1. In an Observer pattern, a subscriber renews some relevant piece of data from a publisher. In this project, the usecase is simple enough to not need an interface/trait. Having just the model is enough and frankly more efficient.
+
+2. In this case, a DashMap could help by ensuring that those two fields are unique. Having a list would not ensure uniqueness, and can therefore nullify the main purpose of an id.
+
+3. From what I understand, the singleton pattern does not provide thread-safety which means that it isn't an adequate replacement for the dashmap.
 
 #### Reflection Publisher-2
 
