@@ -88,6 +88,11 @@ This is the place for you to write reflections:
 
 2. We could in theory move everything that the services and controllers do into the models. But that would violate SRP, and arguably, the models wouldn't be serving their purposes as models anymore.
 
-3. 
+3. Postman helps significantly in testing APIs. Normally I'd have to write custom scripts just to hit APIs, but Postman removes that hurdle. One feature that I like about it is how I'm able to group API requests together, it makes the whole thing more sane.
 
 #### Reflection Publisher-3
+1. This project uses the push model, as it mainly relies on the notify feature to send data to subscribers.
+
+2. In theory, implementing the pull model instead would help give the subscribers a degree of freedom as to when they want/need to update their data. The obvious disadvantage would be that in cases where data can change at any time and must be adjusted in real-time, subscribers would need to frequently poll.
+
+3. The entire project would run slower due to various blocking issues. Generally speaking, multi-threading is used to increase performance. Thus without multi-threading, presumably performance would degrade.
