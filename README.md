@@ -84,5 +84,10 @@ This is the place for you to write reflections:
 3. From what I understand, the singleton pattern does not provide thread-safety which means that it isn't an adequate replacement for the dashmap.
 
 #### Reflection Publisher-2
+1. The first SOLID principle is Single Responsibility. By separating the codebase into models, controllers, and views, we ensure that each of these components do a relatively specific thing. In the specific case of this project, and because it uses Rust, this separation is doubly important as concurrency would be very difficult to achieve if all of the classes were combined haphazardly.
+
+2. We could in theory move everything that the services and controllers do into the models. But that would violate SRP, and arguably, the models wouldn't be serving their purposes as models anymore.
+
+3. 
 
 #### Reflection Publisher-3
